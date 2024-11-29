@@ -23,8 +23,9 @@ final class TableViewDataSource: NSObject, NSTableViewDataSource {
     }
     
     func vmBundle(forRow row: Int) -> VMBundle? {
-        if row < fileModel.getVMBundles().count {
-            return fileModel.getVMBundles()[row]
+        let bundles = fileModel.getVMBundles()
+        if row < bundles.count {
+            return bundles[row]
         } else {
             return nil
         }

@@ -30,7 +30,6 @@ struct FileModel {
     
     func getRestoreImages() -> [String] {
         var result: [String] = []
-        
         if let urls = try? FileManager.default.contentsOfDirectory(at: URL.baseURL, includingPropertiesForKeys: nil, options: []) {
             for url in urls {
                 if url.lastPathComponent.hasSuffix("ipsw") {
